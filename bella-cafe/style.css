@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: 'Noto Sans JP';
+    src: url(./assets/fonts/NotoSansJP-Regular.otf) format('truetype-variations')
+}
 
 body{
     background-image: url("img/cafe.jpg");
