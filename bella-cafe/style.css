@@ -1,0 +1,85 @@
+
+
+body{
+    background-image: url("img/cafe.jpg");
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.menu{
+    padding: 25px 0;
+    width: 1050px;
+    height: 900px;
+    background-color: #fff5d7;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+
+hr.primer{
+    border: none;
+    background-color: burlywood;
+    border-radius: 5px;
+    height: 3px;
+    width: 70%;
+    margin: auto;   
+}
+
+hr.segunda{
+    border: none;
+    background-color: burlywood;
+    border-radius: 5px;
+    height: 3px;
+    width: 70%;
+    margin-top: 30px; 
+}
+
+h1{
+    text-align:center;
+    font-size: 2em;
+}
+
+h2.año{
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;  
+    margin-bottom: 25px;
+}
+
+h2.titulillo{
+    text-align:center;
+    font-size: 23px;
+    margin: auto;
+    padding: 0px 75px;
+    margin-top: 20px;
+}
+
+#coffee{
+    display:flex;
+    justify-content:center;
+    width: 5em;
+    margin: 0 auto;
+    padding: 0px 75px;
+}
+
+#cake{
+    display:flex;
+    justify-content:center;
+    width: 3em;
+    margin: auto;
+    margin-top: 8px;
+    padding: 2px 75px;
+}
+
+.elemento{
+    text-align:center;
+    padding: 6px 75px;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer{
+    text-align: center;
+    margin-top: 30px;
+}
