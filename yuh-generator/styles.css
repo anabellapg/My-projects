@@ -1,0 +1,50 @@
+body{
+    background-image: url("./assets/img/ariana.jpg");
+    height: 100%;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.keys{
+    padding: 35px;
+    width: 1050px;
+    margin: 0 470px;
+    margin-top: 150px;
+}
+
+span{
+    margin-bottom: 5px;
+}
+
+.tecla{
+    font-size: 25px;
+    color: blanchedalmond;
+    font-weight: 600;
+    padding:10px;
+}
+
+.sound{
+    padding:10px;
+    font-size: 20px;
+    font-weight: 500;
+    color:cornsilk;
+}
+
+.key{
+    display: grid;
+    place-items: center;
+    width: 20%;
+    margin: 1rem;
+    padding: 15px 5px;
+    border-radius: 2px;
+    border: .2rem solid blanchedalmond;
+    background-color:mediumseagreen;
+    transition: all 0.5s;
+}
+
+.playing{
+    transform:scale(1.05);
+    border-color: darkgoldenrod;
+    background-color:darkgreen;
+    box-shadow: 0 0 10px darkgoldenrod;
+}

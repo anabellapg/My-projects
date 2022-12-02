@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yuh generator</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon-16x16.png"> 
+
+</head>
+
+<body>
+    <div class="keys"> 
+        <div data-key="65" class="key">
+            <span class="tecla">A</span>
+            <span class="sound">yuuuuh</span>
+        </div>
+        <div data-key="83" class="key">
+            <span class="tecla">S</span>
+            <span class="sound">yuhhh</span>
+        </div>
+        <div data-key="68" class="key">
+            <span class="tecla">D</span>
+            <span class="sound">yuyuuuuuh</span>
+        </div>
+        <div data-key="70" class="key">
+            <span class="tecla">F</span>
+            <span class="sound">yyyuh</span>
+        </div>
+        <div data-key="71" class="key">
+            <span class="tecla">G</span> 
+            <span class="sound">yyuuuhhhh</span>
+        </div>
+    </div>  
+
+    <audio data-key="65" src="./assets/sounds/yuh1.mp3"></audio>
+    <audio data-key="83" src="./assets/sounds/yuh2.mp3"></audio>
+    <audio data-key="68" src="./assets/sounds/yuh3.mp3"></audio>
+    <audio data-key="70" src="./assets/sounds/yuh4.mp3"></audio>
+    <audio data-key="71" src="./assets/sounds/yuh5.mp3"></audio>
+  
+    <script>
+        window.addEventListener('keydown', activar);
+        /*en toda la window en la que estoy trabajando, 
+        cuando se produce un keydown, quiero que actives 
+        funcioncilla*/
+    
+        function activar(event){
+            const audio=document.querySelector(`audio[data-key="${event.keyCode}"]`);
+            const key=document.querySelector(`.key[data-key="${event.keyCode}"]`);
+
+            /*ahí, supongo yo, el .keyCode es un __proto__ cuando event==='keydown' */
+
+            if(!audio) return;
+            audio.currentTime=0;
+            /*lo del currentTime es para que no se espera a que termine todo el sonido,
+            por si le doy varias veces seguidas a una tecla */
+            audio.play();
+            key.classList.add('playing');
+        };
+
+        /*hasta aquí hemos activado la transición. ahora queremos desactivarla*/
+
+        const keys=document.querySelectorAll('.key');
+        keys.forEach(key=>key.addEventListener('transitionend',removeTransition));
+
+        function removeTransition(event){
+            if (event.propertyName!=='transform') return;
+            /*porque si haces console.log(event), es el último evento
+            que sufre la key. Por qué? creo que porque "transform",
+            en el css, es lo que va con el transition (lo de 0.07s)*/
+
+            /*y nosotros queremos desactivar los cambios una vez se han hecho todos*/
+
+            this.classList.remove('playing')
+
+            /*ese "this" apunta a la cosa desde la cual estamos llamando la función */
+
+        }
+    
+    </script>
+
+
+
+
+</body>
+</html>
