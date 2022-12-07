@@ -1,0 +1,53 @@
+/*resulta que en css tbb se pueden declarar variables.
+las vamos a declarar en root, que hace referencia a todo el html */
+
+:root{
+    --base: #5f9ea0;
+    --spacing: 10px;
+    --blur: 10px;
+}
+
+html{
+    background-image: url("./assets/descarga.jfif");
+    background-size: cover;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+}
+
+#Titulo{
+    font-style: italic;
+    font-size: 80px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+body{
+    text-align: center;
+    /*font-family: 'Noto Sans JP';
+    src: url(./assets/NotoSansJP-Regular.otf) format('truetype-variations')*/
+    font-weight: 100;
+    color:antiquewhite;
+}
+
+.controls {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    font-size: 30px;
+    margin-left: 85px;
+  }
+
+input {
+    width: 100px;
+    margin: 25px;
+    margin-right: 80px;
+    }
+
+img{
+    width:50%;
+    padding: var(--spacing); 
+    /*llamamos a los valores default declarados en el root*/
+    background: var(--base);
+    filter: blur(var(--blur));
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twilight</title>
+    <link rel="stylesheet" href="./styles.css" />
+
+</head>
+
+<body>
+    <h1 id="Titulo"> Drag to reveal! </h1>
+    <div class="controls">
+        <div>
+            <!-- la etiqueta label es para el texto que va a acompañar, por ejemplo, un campo o un formulario
+            (sabremos lo que es porque ese objeto tendrá name="lo que sea" y la etiqueta era for="lo que sea")
+            La etiqueta input es el formulario en sí. En este caso, de tipo range --> 
+            <label for="spacing">Spacing:</label>
+            <input id="spacing" type="range" name="spacing" data-medida="px">
+        </div>
+        <div>
+            <label for="blur">Blur:</label>
+            <input id="blur" type="range" name="blur" data-medida="px">
+            <!-- sobre el tipo range: no he especificado un value,
+            y por tanto se tomará min:0 y max:100, value=mitad de max y min
+            de forma predeterminada --> 
+        </div>
+        <div>
+            <label for="base">Base Color:</label>
+            <input id="base" type="color" name="base" value="#5f9ea0">          
+        </div>
+      </div>
+    <script src="./script.js"></script>
+
+    <img src="./assets/bwthubl.jpg">
+
+    </body>
+    
+    
+    </html>
