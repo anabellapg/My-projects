@@ -14,13 +14,13 @@
             (sabremos lo que es porque ese objeto tendrá name="lo que sea" y la etiqueta era for="lo que sea")
             La etiqueta input es el formulario en sí. En este caso, de tipo range --> 
             <label for="spacing">Spacing:</label>
-            <input id="spacing" type="range" name="spacing" data-medida="px">
+            <input id="spacing" type="range" name="spacing" value="10" data-medida="px">
         </div>
         <div>
             <label for="blur">Blur:</label>
-            <input id="blur" type="range" name="blur" data-medida="px">
-            <!-- sobre el tipo range: no he especificado un value,
-            y por tanto se tomará min:0 y max:100, value=mitad de max y min
+            <input id="blur" type="range" name="blur" value="10" data-medida="px">
+            <!-- sobre el tipo range: si no hubiera especificado un value,
+            tomaría min:0 y max:100, value=mitad de max y min
             de forma predeterminada --> 
         </div>
         <div>
