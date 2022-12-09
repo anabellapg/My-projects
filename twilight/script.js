@@ -3,11 +3,13 @@ const inputs=document.querySelectorAll('input');
 que se parece a un array, pero no lo es*/
 
 function Update(){
-    const suffix = this.dataset.medida || '';
+    const suffix = this.dataset.medida ?? '';
     /*this.dataset te devuelve todos los atributos "data-" del objeto this*/
 
-    /*ponemos || '' para el caso que trabajemos con color.
-    si no lo pusieramos, tendriamos un undefined */
+    /* Usamos el nullish operator (??) para que en caso de que sea undefined o null, adquiera el otro valor, 
+    en caso de usar el OR (||), si el valor es 0 o false, también adquiriría el segundo valor, cosa que no 
+    nos interesa. 
+     */
 
     document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
 
