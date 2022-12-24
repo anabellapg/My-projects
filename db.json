@@ -1,12 +1,6 @@
 {
    "songs":[
   {
-    "author": "Gene Autry", 
-    "id": 1, 
-    "time": "192", 
-    "title": "Rudolph the Red Nosed Reindeer"
-  }, 
-  {
     "author": "Mariah Carey", 
     "id": 2, 
     "time": "241", 
