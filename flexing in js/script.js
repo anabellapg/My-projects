@@ -19,12 +19,7 @@ panels.forEach(panel => panel.addEventListener('transitionend', Active));
     termine de ponerse más grande el flex) los p adquieran la clase
     open-active*/
 
-/*en la versión original de este ejercicio, el chico
-hacía que el font también cambiara de tamaño el font. Pero
-no he conseguido replicarlo; hay muchas cosas de su código que
-no termino de entender así que he dejado esto así*/
 
-
-/*aquí estamos usando .toggle mientras que en el day1 usamos .add y .remove. ¿Por qué?
+/*aquí estamos usando .toggle mientras que en el yuh-generator usamos .add y .remove. ¿Por qué?
 Pues porque en el day1 necesitábamos que la transición creada por la clase nueva desapareciera
 automáticamente, aquí no se irá hasta que el evento click no vuelva a suceder*/
