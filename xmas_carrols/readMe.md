@@ -5,5 +5,7 @@ In this project, I have learned:
   <li>How to change the html content using .innerHTML </li>
   <li>Javscript event 'focusout' </li>
 </ul>
+
 Merry Christmas!!
+
 Bella <3
