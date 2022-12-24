@@ -1,5 +1,4 @@
-{
-   "songs":[
+[
   {
     "author": "Mariah Carey", 
     "id": 2, 
@@ -32,4 +31,3 @@
         "title": "Santa Tell me"
    }
 ]
-}
