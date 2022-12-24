@@ -1,0 +1,131 @@
+html{
+    /*el border-box hace que si metemos padding o bordes 
+    en los elementos hijos que tengamos en el html (en este caso, 
+    los panels) el width de los panels no cambia, sino que ese 
+    padding va incluido en el width
+    */
+    width: 100%;
+    font-family: 'Chivo Mono', monospace;
+    src: url(./assets/ChivoMono-Regular.ttf);
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    font-weight: 100;
+    color:antiquewhite;
+}
+
+.panels {
+    min-height: 100vh;
+    display: flex;
+    /*sin ese display flex, los paneles se ponen horizontales*/
+    overflow: hidden;
+    /*sin el overflow hidden, el primer y el tercer p se me
+    escapan de los panels*/
+  }
+
+.panel{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+
+    /* flex:1 significa que el div crecerá y decrecerá en
+    la misma proporción que el tamaño de la ventana,
+
+    y que además, el div ocupará todo el espacio disponible.
+    Esto significa que como el .panel contiene 5 panels,
+    cada uno ocupará todo el espacio que pueda de forma igualitaria
+    (en este caso, cada uno el 20% de la pantalla)
+    */
+
+    
+    text-transform: uppercase;
+    flex-direction: column;
+    /*Si no ponemos el flex-direction, los <p> se pegan
+    horizontalmente */
+
+    transition:
+        font-size 0.7s,
+        flex 0.7s;
+}
+
+.panel1 { background-image:url("./assets/1.jpg"); }
+.panel2 { background-image:url("./assets/2.jpg"); }
+.panel3 { background-image:url("./assets/3.jpg"); }
+.panel4 { background-image:url("./assets/4.jpg"); }
+.panel5 { background-image:url("./assets/5.jpg"); }
+
+p{
+    width: 100%;
+    transition: transform 0.5s;
+    font-size: 2em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+}
+
+p:nth-child(2) {
+    font-size: 4em;
+  }
+
+/*
+este selector dice: de aquellos p que sean hijos (en este caso,
+sólo pueden ser hijos de panel) selecciona el segundo
+
+también se podrían haber puesto etiquetas "first", "second", "third"
+a los <p> del html, pero bueno. Así practico la nueva etiqueta
+*/
+
+p:first-child {
+    transform: translateY(-100%)
+    /*esto los saca de la pantalla hacia arriba*/
+}
+
+p:last-child {
+    transform: translateY(100%)
+    /*esto los saca de la pantalla hacia abajo*/
+}
+
+/*ahora vamos a volver al viejo truco de poner y quitar clases.
+por eso, aunque ahora veo la etiqueta open-active y no sé lo que es,
+más adelante tendrá sentido */
+
+.panel.open-active > *:first-child { transform: translateY(0); }
+
+.panel.open-active > *:last-child { transform: translateY(0)}
+
+.panel.open{
+    flex:5;
+    /*si esto está activado, ese panel ocupará
+    cinco veces más espacio que los otros*/
+}
+
+
+
+/*
+
+Pequeño paréntesis acerca de cómo centrar un div en 2022. Sólo 
+hay dos formas válidas:
+
+1. .parent{
+    display:flex;
+    justify-content:center;
+    align-items:center
+
+2. parent{
+    display:grid;
+    place-items:center;
+
+Otra cosa que he aprendido: la sintaxis .panel > * {}
+en CSS selecciona todo aquello que es hijo de un panel.
+
+*/
+
