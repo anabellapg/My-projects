@@ -7,8 +7,6 @@ function handleCheck(ev){
     let inBetween=false;
     //comprobamos si en el evento se está pulsando shift
     //(al parecer esto es una propiedad del evento click)
-    //y también si el checkbox actual lo hemos clicado
-    //(sin esa condición, sólo sujetando shift se marcan casillas random)
 
     if (ev.shiftKey){
         checkboxes.forEach(checkbox=>{
