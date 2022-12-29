@@ -19,8 +19,8 @@ ctx.lineWidth = 41;
 function draw(ev){
     if(!isDrawing) return;
 
-    ctx.strokeStyle=`hsl(${hue},100%,50%)`;
-    //ctx.lineWidth=hue%360;
+    ctx.strokeStyle=`hsl(${hue},100%,75%)`;
+    //el tercer parámetro da un color pastel muy bonito
 
     ctx.beginPath();
     ctx.moveTo(lastX,lastY);
@@ -32,11 +32,7 @@ function draw(ev){
     if (ctx.lineWidth >= 400 || ctx.lineWidth <= 40) {
         direction = !direction;
       }
-      if(direction) {
-        ctx.lineWidth++;
-      } else {
-        ctx.lineWidth--;
-      }
+    direction? ctx.lineWidth++: ctx.lineWidth--;
 }
 canvas.addEventListener('mousemove',draw)
 
