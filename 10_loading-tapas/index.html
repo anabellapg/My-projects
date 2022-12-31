@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+   <!--sin lo del charset los emojis no se leen bien-->
+  <head>
+    <title>Tapas</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+
+  <body>
+    <img src="assets/descarga.png">
+    <div class="wrapper">
+
+      <h2>Tapillas</h2>
+      
+      <ul class="plates">
+        <li>Loading tapas...</li>
+      </ul>
+
+      <form class="add-items">
+        <input type="text" name="item" placeholder="Tapa Name" required>
+        <!--el required hace que salte un aviso si te dejas el campo vacío-->
+        <input type="submit" value="+ New Tapa">
+        <!--el input type submit automáticamente se lee como un botón-->
+      </form>
+
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

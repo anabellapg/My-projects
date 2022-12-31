@@ -1,0 +1,42 @@
+body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-image: url('./assets/library-book-bookshelf-read.jpg');
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#books {
+  width: 500px;
+  height: 620px;
+  margin: 100px auto;
+  background: antiquewhite;
+  padding: 5px;
+
+  list-style: inside square;
+  font-size: 13px;
+}
+
+li {
+  border-bottom: 0.5px solid saddlebrown;
+  padding: 15px;
+  margin: 0 20px;
+}
+
+li:last-child {
+  border-bottom: 0;
+}
+
+a {
+  color: #ffc600;
+  text-decoration: none;
+}
+
+
+
+
+

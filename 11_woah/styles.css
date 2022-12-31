@@ -1,0 +1,29 @@
+  
+  body {
+    margin: 0;
+  }
+
+  .content {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: sans-serif;
+    color: black;
+  }
+
+  h1 {
+    text-shadow: 10px 10px 0 rgba(0,0,0,1);
+    font-size: 100px;
+  }
+
+
+
+
+
+
+
+
+
+
