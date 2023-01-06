@@ -22,7 +22,7 @@ function addItem(ev){
     que aplicar esos métodos */
 
     this.reset();
-    //eso es un método de los input text que básicamente es el zurücksetzen
+    //eso es un método de los input text que básicamente es reestablecer, vaciar ese campo
 }
 
 //en esta función, el primer argumento será la lista de platos a la que le vamos haciendo push
