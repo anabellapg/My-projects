@@ -1,0 +1,81 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  background-image: url(./assets/harry-potter.jfif)
+}
+
+.voiceinator {
+  padding: 2rem;
+  padding-right: 4rem;
+  width: 50rem;
+
+  border-radius: 1rem;
+  background: white;
+  overflow: hidden;
+
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+}
+
+h1 {
+  width: calc(100% + 6rem);
+  margin: -2rem 2rem 2rem -2rem;
+  padding: .5rem;
+
+  background: #ffc600;
+  border-bottom: 5px solid #F3C010;
+  
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 100;
+  text-shadow: 3px 3px 0 #F3C010;
+}
+
+input, button, select, textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 0;
+
+  font-size: 2rem;
+  background: #F7F7F7;
+  outline: 0;
+}
+
+label{
+  font-size: 2rem;
+}
+
+textarea {
+  height: 20rem;
+}
+
+button {
+  background: #ffc600;
+
+  width: 49%;
+  float: left;
+  margin-bottom: 0;
+  border-bottom: 5px solid #F3C010;
+
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+button:active {
+  top: 2px;
+}
+
+#stop {
+  margin-right: 2%;
+}

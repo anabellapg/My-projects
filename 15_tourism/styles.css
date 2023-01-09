@@ -1,0 +1,98 @@
+html {
+  background: #eeeeee;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+}
+
+body {
+  margin: 0;
+}
+
+
+.site-wrap {
+  max-width: 700px;
+  margin: 70px auto;
+  padding: 40px;
+
+  background: white;
+  text-align: justify;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.5s;
+
+  transform: scale(0.98);
+}
+
+header {
+  height: 60vh;
+  background: url("./assets/captura.PNG") top center; 
+  background-size: cover;
+
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+  font-size: 7vw;
+  text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
+}
+
+nav {
+  background: black;
+
+  width: 100%;
+  transition: all 0.5s;
+  position: relative;
+  top: 0;
+  z-index: 1;
+}
+
+.fixed-nav nav{
+  position: fixed;
+}
+
+nav ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li.logo {
+  max-width: 0;
+  /*max-width 0 porque en principio esto no existe*/
+
+  background: white;
+  transition: all .5s;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.fixed-nav li.logo{
+  max-width: 500px;
+}
+
+.fixed-nav .site-wrap{
+  transform: scale(1);
+}
+
+li.logo a {
+  color: black;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+  transition: all 0.2s;
+}

@@ -1,0 +1,64 @@
+html{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+body {
+  font-family: 'Montserrat';
+  src: url(./assets/Montserrat-VariableFont_wght.ttf);
+
+  background:
+    linear-gradient(45deg, hsla(340, 100%, 75%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
+    linear-gradient(135deg, hsla(225, 95%, 75%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
+    linear-gradient(225deg, hsla(140, 90%, 75%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
+    linear-gradient(315deg, hsla(35, 95%, 75%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
+}
+
+.wrapper {
+  white-space: pre-wrap; /* Esto es para poner multilíneas */
+  font-style: italic;
+  font-weight: 600px;
+  font-size: 25px;
+  line-height: 35px;
+
+  margin-left: 100px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  background: rgba(0,0,0,0.05);
+  border-radius: 30px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+
+  margin:100px 0 0 0;
+
+  font-size: 25px;
+  font-style: italic;
+}
+
+.menu a {
+  padding: 15px;
+  margin: 0 20px;
+  color: black;
+}
+
+
+.highlight {
+  transition: all 0.2s;
+  border-bottom: 2px solid white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*lo de position absolute, top y left es muy importante, porque si no, se va al final de la pag*/
+  background: white;
+  z-index: -1; /*esto, entiendo, lleva el highlight detrás de lo que sea (en este caso, la a)*/
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
