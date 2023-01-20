@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+
+  font-family:Arial, Helvetica, sans-serif;
+
+  background:
+  linear-gradient(45deg, hsla(340, 100%, 75%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
+  linear-gradient(135deg, hsla(225, 95%, 75%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
+  linear-gradient(225deg, hsla(140, 90%, 75%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
+  linear-gradient(315deg, hsla(35, 95%, 75%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
+}
+
+.pag {
+  max-width: 700px;
+  margin: 80px auto;
+  background: antiquewhite;
+  padding: 40px;
+  text-align: justify;
+}
+
+nav {
+  margin-top: 100px;
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.elements {
+  color:lightgoldenrodyellow;
+  text-decoration: none;
+  font-size: 20px;
+  background: rgba(0,0,0,0.2);
+
+  padding: 10px 20px;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+
+.dropdown {
+  opacity: 0;
+  display: none;
+  /*otra forma de hacer un objeto invisible es ponerle opacidad 0 y display none*/
+  /*sí, es necesario hacer las dos cosas, así se hace tanto en angular como react*/
+
+  position: absolute;
+  padding: 20px;
+  top: -20px;
+  /*restamos 20px de top para compensar los que estamos poniendo de padding*/
+
+  border-radius: 2px;
+
+  transition: all 0.5s;
+  transform: translateY(100px);
+}
+
+.trigger-enter .dropdown {
+  display: block; /*esto es simplemente pasar de no mostrarse (display: none) a sí mostrarse (display: block)*/
+}
+
+.trigger-enter-active .dropdown {
+  opacity: 1;
+}
+
+
+.dropdownBackground {
+  position: absolute;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+
+  transition: all 0.3s, opacity 0.1s, transform 0.2s;
+
+  display: flex;
+  justify-content: center;
+  align-self: center;
+
+  opacity:0;
+}
+
+.dropdownBackground.open {
+  opacity: 1;
+}
+
+.arrow {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: block;
+  background: white;
+  transform: rotate(45deg);
+}
+
+.bio {
+  min-width: 500px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  line-height: 1.7;
+}
+
+.bio img {
+  float: left;
+  margin-right: 20px;
+}
+
+.dropdown2 {
+  min-width: 200px;
+}
+
+.dropdown2 li {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: #ffc600;
+}
+
+a.button {
+  padding: 10px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.twitter { border-radius: 5px; background: #019FE9; }
+.facebook { border-radius: 5px; background: #3B5998; }
+.blog { border-radius: 5px; background: #ffc600; }

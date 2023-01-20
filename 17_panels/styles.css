@@ -1,0 +1,73 @@
+html {
+  background: url('assets/wall.jpg');
+  background-size: cover;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.items {
+  height: 600px;
+  width: 100%;
+  padding: 100px;
+
+  border: 1px solid white;
+
+  overflow-x: scroll;
+  white-space: nowrap; /*si no ponemos esto, los paneles se disponen verticalmente*/
+
+  cursor: pointer;
+  transition: all 0.2s;
+  transform: scale(0.98);
+
+  background: rgba(255,255,255,0.1);
+
+  /*esto de la perspectiva es para que la parte frontal se vea como inflada*/
+  perspective: 800px;
+}
+
+.items.active {
+  background: rgba(255,255,255,0.3);
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  transform: scale(1);
+}
+
+.item {
+  width: 200px;
+  height: 500px;
+  margin-top: 40px;
+
+  display: inline-flex; /*para que se dispongan en una línea*/
+  align-items: center;
+  justify-content: center;
+
+  font-size: 80px;
+  font-weight: 100;
+
+  color: rgba(0,0,0,0.15);
+  box-shadow: inset 0 0 0 10px rgba(0,0,0,0.15);
+}
+
+/*ponemos un 9n+i para que se repita el ciclo cada 10*/
+
+.item:nth-child(9n+1) { background: dodgerblue;}
+.item:nth-child(9n+2) { background: goldenrod;}
+.item:nth-child(9n+3) { background: paleturquoise;}
+.item:nth-child(9n+4) { background: gold;}
+.item:nth-child(9n+5) { background: cadetblue;}
+.item:nth-child(9n+6) { background: tomato;}
+.item:nth-child(9n+7) { background: lightcoral;}
+.item:nth-child(9n+8) { background: darkslateblue;}
+.item:nth-child(9n+9) { background: rebeccapurple;}
+
+.item:nth-child(even) { transform: scaleX(1.34) rotateY(40deg); }
+.item:nth-child(odd) { transform: scaleX(1.34) rotateY(-40deg); }
+/*¿por qué va rotando el objeto conforme scrolleamos?*
+/*la rotación se hace respecto a un punto (que no tengo claro cuál)
+que va cambiando conforme scrolleamos horizontalmente, así que se produce ese efecto*/

@@ -1,0 +1,66 @@
+html {
+  font-size: 10px;
+  background: rgb(39, 191, 39);
+}
+
+body {
+  font-family: 'Amatic SC', cursive;
+  src: url("./assets/AmaticSC-Bold.ttf")
+}
+
+h1 {
+  text-align: center;
+  font-size: 10rem;
+}
+
+.score {
+  background: rgba(255,255,255,0.2);
+  padding: 0 3rem;
+  border-radius: 1rem;
+}
+
+.game {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hole {
+  flex: 1 1 33.33%;
+  /*el 33'33% establece que cada hole va a ocupar 1/3 de la fila*/
+  /*el primer 1 ya sabemos que es para que ocupen el máximo espacio posible*/
+  /*y el segundo 1 creo que da igual*/
+  overflow: hidden;
+  position: relative;
+  /*relative porque va encima del topo*/
+}
+
+.hole:after {
+  background: url('./assets/dirt.svg') no-repeat;
+  background-size: contain;
+  /*una forma fácil de ajustar el tamaño del fondo: pedir en el CSS 
+  que tenga un tamaño tal que lo que recubre (el hole) lo contenga*/
+
+  content: '';
+  width: 100%;
+  height:70px;
+  
+  position: absolute;
+  bottom: -30px;
+}
+
+.mole {
+  background: url('./assets/mole.svg')no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+}
+
+.hole.up .mole {
+  top: 0;
+}
